@@ -71,4 +71,18 @@ class Manager:
             )
         for tenant in tenants_in_apartment ] 
     
-    
+    def get_debtors(self, apartment: str, year: int, month: int) -> TenantSettlement:
+        for self.tenant in self.tenants.values():
+            if self.tenant.total_due_pln>Tenant.total_transfers_pln:
+                return Tenant.tenant
+            
+    def check_deposits(self):
+        bill_deposit_amount=0
+        for self.bill in Bill:
+            if Bill.type == "Deposit":
+                bill_deposit_amount+=Bill.amount_pln
+        
+        if bill_deposit_amount==Tenant.rent_pln:
+            return "Masz pełną kaucję"
+        else:
+            return Tenant.rent_pln-bill_deposit_amount
